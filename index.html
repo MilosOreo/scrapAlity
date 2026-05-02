@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title> sCRAPaLITY </title>
+<title>scrapAlity</title>
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="Assets/Favicon.ico">
@@ -20,11 +20,11 @@ content="width=device-width, initial-scale=1.0">
 </div>
 
 <div style="text-align: center; width: 600px; padding: 15px; border: 10px; border-color: lightgrey; border-style: solid; margin: auto; background-color: white;">
-    <img src="404.png" id="PanelImage">
+    <img src="Assets/Panels/00001.png" id="PanelImage">
 
-    <h1 style="text-shadow: 2px 2px rgba(0, 0, 0, 0.2); font-size: 20px;">Panel_Text</h1>
+    <h1 id="PanelText" style="text-shadow: 2px 2px rgba(0, 0, 0, 0.2); font-size: 20px;">Panel_Text</h1>
 
-    <h1 style="text-align: left; text-shadow: 2px 2px rgba(0, 0, 0, 0.2); font-size: 27px; color: blue;">==></h1>
+<button id="PanelNext" onclick="nextPanel()" style="display: block; text-align: left; text-shadow: 2px 2px rgba(0, 0, 0, 0.2); font-size: 27px; color: blue; cursor: pointer; background: none; border: none; padding: 0; font-family: inherit; text-decoration: underline;">next</button>
   
 </div>
 
@@ -32,25 +32,25 @@ content="width=device-width, initial-scale=1.0">
   <div>
     <button style="color: red; text-shadow: 2px 2px rgba(0, 0, 0, 0.2); 
      -webkit-text-stroke: 4px darkred;
-      paint-order: stroke fill;">Go Back</button>
+      paint-order: stroke fill;" id="Back">Go Back</button>
     <button style="color: orange; text-shadow: 2px 2px rgba(0, 0, 0, 0.2); 
      -webkit-text-stroke: 4px darkorange;
-      paint-order: stroke fill;">Start Over</button>
+      paint-order: stroke fill;" id="Start_Over">Start Over</button>
   </div>
 
   <div>
     <button style="color: rgb(255, 255, 63); text-shadow: 2px 2px rgba(0, 0, 0, 0.2); 
      -webkit-text-stroke: 4px rgb(173, 173, 15);
-      paint-order: stroke fill;"">Save</button>
+      paint-order: stroke fill;" id="Save"">Save</button>
     <button style="color: green; text-shadow: 2px 2px rgba(0, 0, 0, 0.2); 
      -webkit-text-stroke: 4px darkgreen;
-      paint-order: stroke fill;">Auto Save (X)</button>
+      paint-order: stroke fill;" id="Toggle_Save">Auto Save (X)</button>
     <button style="color: blue; text-shadow: 2px 2px rgba(0, 0, 0, 0.2);  
      -webkit-text-stroke: 4px rgb(70, 70, 255);
-      paint-order: stroke fill;">Load Save</button>
+      paint-order: stroke fill;" id="Load">Load Save</button>
     <button style="color: purple; text-shadow: 2px 2px rgba(0, 0, 0, 0.2);  
      -webkit-text-stroke: 4px rgb(206, 92, 255);
-      paint-order: stroke fill;">Delete Save</button>
+      paint-order: stroke fill;" id="Delete">Delete Save</button>
   </div>
 </div>
 
@@ -59,12 +59,15 @@ content="width=device-width, initial-scale=1.0">
     </div>
 
   <div style="margin-left: auto; margin-right: auto; text-align: center; width: 60px; height: 30px; padding: 5px; background-color: white;">
-    <input type="number" style="margin: auto; text-align: center; width: 100%; height: 100%;" value="1" aria-valuemin="1" aria-valuemax="2" min="1" max="2">
+    <input id="PageNumber" type="number" style="margin: auto; text-align: center; width: 100%; height: 100%;" value="1" aria-valuemin="1" aria-valuemax="2" min="1" max="2">
   </div>
 
   <div style="height: 20px;"></div>
 
-<script src="Assets/JavaScript/PageNotFound.js"></script>
+  <script src="Assets/JavaScript/Save.js"></script>
+   <script src="Assets/JavaScript/PanelContent.js"></script>
+   <script src="Assets/JavaScript/PanelSync.js"></script>
+  <script src="Assets/JavaScript/PageNotFound.js"></script>
 </body>
 
 </html>
